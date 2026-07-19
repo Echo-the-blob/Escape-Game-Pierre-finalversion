@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dossier PG-001</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="background"></div>
+
+
+<main class="container">
+
+
+    <!-- ÉCRAN D'ACCUEIL -->
+
+    <section id="accueil">
+
+
+        <div class="barre">
+            ████████████████████
+        </div>
+
+
+        <p class="classification">
+            DOSSIER CLASSIFIÉ
+        </p>
+
+
+        <p class="protocol">
+            PROTOCOLE D'IDENTIFICATION ACTIF
+        </p>
+
+
+        <h1>
+            ACCÈS RESTREINT
+        </h1>
+
+
+        <div class="dossier">
+
+
+            <p>
+                DOSSIER N° :
+                <span>PG-001</span>
+            </p>
+
+
+            <p>
+                OPÉRATION :
+                <span>CONFIDENTIELLE</span>
+            </p>
+
+
+            <p>
+                DESTINATAIRE :
+                <span>CAPITAINE PIERRE</span>
+            </p>
+
+
+            <p>
+                NIVEAU D'AUTORISATION :
+            </p>
+
+
+            <p class="danger">
+                INSUFFISANT
+            </p>
+
+
+        </div>
+
+
+
+        <p class="texte">
+
+            10 fichiers classifiés sont verrouillés.<br><br>
+
+            Résolvez les énigmes pour obtenir
+            l'accès complet.
+
+        </p>
+
+
+        <div class="statut">
+
+            STATUT DE LA MISSION :
+
+            <br>
+
+            <span>
+                EN ATTENTE
+            </span>
+
+        </div>
+
+
+
+<button id="start">
+
+    ACCEPTER LA MISSION
+
+</button>
+
+
+
+</section>
+
+<!-- INTERFACE DE MISSION -->
+
+
+<section id="mission" class="cache">
+
+
+    <h2>
+        MISSION ACTIVE
+    </h2>
+
+
+    <p id="progression">
+        Fichiers déclassifiés : 0 / 10
+    </p>
+
+
+
+    <div id="fichier-actuel">
+
+
+        <p class="classification">
+            FICHIER CLASSIFIÉ 001
+        </p>
+
+
+        <div class="lock">
+            🔒
+        </div>
+
+
+        <p>
+            Statut :
+            <span class="danger">
+                VERROUILLÉ
+            </span>
+        </p>
+
+
+        <button id="ouvrir-enigme">
+
+            LANCER L'ANALYSE
+
+        </button>
+
+
+    </div>
+
+
+
+    <div id="console" class="cache">
+
+        <p id="consoleTexte"></p>
+
+    </div>
+
+
+
+</section>
+
+
+
+
+<!-- POPUP ENIGME -->
+
+
+<section id="enigme" class="cache">
+
+
+    <div class="fenetre">
+
+
+        <p class="classification">
+
+            AUTHENTIFICATION REQUISE
+
+        </p>
+
+
+
+        <h2 id="titre-enigme">
+
+            DOSSIER PG-001
+
+        </h2>
+
+
+
+        <p id="question">
+
+            Le jour où tout a commencé pour toi.
+
+            <br><br>
+
+            Entre la date au format :
+            JJMM
+
+        </p>
+
+
+
+
+        <input
+            id="reponse"
+            type="text"
+            placeholder="Entrer le code..."
+        >
+
+
+
+
+        <button id="validerReponse">
+
+            VALIDER
+
+        </button>
+
+
+
+        <button id="boutonIndice">
+
+            ❔
+
+        </button>
+
+
+
+        <p id="indice" class="cache"></p>
+
+
+
+        <p id="messageReponse"></p>
+
+
+
+    </div>
+
+
+</section>
+
+
+
+   
+
+
+    <!-- PHOTO DEBLOQUEE -->
+
+
+    <section id="photo-section" class="cache">
+
+
+        <p class="classification">
+            ACCÈS AUTORISÉ
+        </p>
+
+
+        <h2>
+            FICHIER DÉCLASSIFIÉ
+        </h2>
+
+
+        <img id="photo" src="" alt="Fichier secret">
+
+
+        <p id="message-photo">
+        </p>
+
+
+        <button id="continuer">
+            CONTINUER LA MISSION
+        </button>
+
+
+    </section>
+
+<!-- GALERIE FINALE -->
+
+    <!-- MISSION TERMINEE -->
+
+    <section id="mission-terminee" class="cache">
+
+        <p class="classification">
+            DOSSIER COMPLET
+        </p>
+
+        <h2>
+            MISSION ACCOMPLIE
+        </h2>
+
+        <p>
+
+            Félicitations Agent Pierre.
+
+            <br><br>
+
+            Tous les fichiers classifiés ont été récupérés.
+
+            <br><br>
+
+            Un accès permanent aux archives personnelles
+            vient de vous être accordé.
+
+        </p>
+
+        <button
+        id="acceder-galerie"
+        onclick="window.location.href='galerie.html'">
+
+            ACCÉDER AUX ARCHIVES
+
+        </button>
+
+    </section>
+
+    <!-- AUTHENTIFICATION GALERIE -->
+
+<!--<section id="auth-galerie" class="cache">
+
+    <p class="classification">
+        AUTHENTIFICATION REQUISE
+    </p>
+
+    <h2>
+        ARCHIVES PERSONNELLES
+    </h2>
+
+    <p>
+
+        Les archives suivantes contiennent des données
+        strictement confidentielles.
+
+        <br><br>
+
+        Vérification de l'identité du destinataire obligatoire.
+
+    </p>
+
+    <h3>
+        Question de vérification
+    </h3>
+
+    <p>
+
+        Quel surnom me donnes-tu régulièrement ?
+
+    </p>
+
+    <input
+    id="code-galerie"
+    type="password"
+    placeholder="Votre réponse..."
+    >
+
+    <button id="ouvrir-galerie">
+
+        CONFIRMER L'IDENTITÉ
+
+    </button>
+
+    <p id="message-galerie"></p>
+
+    <div id="chargement-galerie" class="cache">
+
+    <p id="texte-chargement">
+        Initialisation...
+    </p>
+
+    <div class="barre-chargement">
+
+        <div id="progression-galerie"></div>
+
+    </div>
+
+    <p id="pourcentage-galerie">
+        0%
+    </p>
+
+</div>
+
+    
+
+    </section>-->
+
+    <!--<section id="galerie-section" class="cache">
+
+    <p class="classification">
+        ARCHIVES PERSONNELLES
+    </p>
+
+    <h2>
+        DOSSIERS DÉCLASSIFIÉS
+    </h2>
+
+    <p>
+        Les meilleurs souvenirs méritent leur propre dossier.
+    </p>
+
+    <div id="galerie-photos">
+
+        <img src="Photos/1.jpg">
+        <img src="Photos/2.jpg">
+        <img src="Photos/3.jpg">
+        <img src="Photos/4.jpg">
+        <img src="Photos/5.jpg">
+        <img src="Photos/6.jpg">
+        <img src="Photos/7.jpg">
+        <img src="Photos/8.jpg">
+        <img src="Photos/9.jpg">
+        <img src="Photos/10.jpg">
+        <img src="Photos/11.jpg">
+        <img src="Photos/bonus.jpg">
+
+    </div>
+
+</section> -->
+
+<!-- VISIONNEUSE PHOTO -->
+
+<section id="visionneuse" class="cache">
+
+    <span id="fermer-photo">✕</span>
+
+    <img id="photo-grand" src="">
+
+</section>
+
+
+
+</main>
+
+<!-- ========================= -->
+<!-- TERMINAL ADMINISTRATEUR -->
+<!-- ========================= -->
+
+<section id="terminal-admin" class="cache">
+
+    <div class="terminal">
+
+        <p class="classification">
+            CONNEXION SÉCURISÉE
+        </p>
+
+        <h2>
+            TERMINAL ADMINISTRATEUR
+        </h2>
+
+        <p class="identifiant">
+            UTILISATEUR :
+            <span>CHLOÉ</span>
+        </p>
+
+        <label>
+            MOT DE PASSE
+        </label>
+
+        <input
+            type="password"
+            id="admin-password"
+            autocomplete="off"
+            placeholder="Entrer le code..."
+        >
+
+        <button id="connexion-admin">
+            VALIDER
+        </button>
+
+        <p id="admin-message"></p>
+
+    <div id="admin-panel" class="cache">
+
+        <hr>
+
+        <button id="resetMission">
+            🔄 RÉINITIALISER LA MISSION
+        </button>
+
+        <br><br>
+
+        <button id="unlockAll">
+            🔓 DÉBLOQUER TOUS LES FICHIERS
+        </button>
+
+        <br><br>
+
+        <button id="closeTerminal">
+            FERMER
+        </button>
+
+    </div>
+    </div>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>

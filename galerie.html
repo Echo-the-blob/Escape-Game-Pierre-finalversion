@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Archives personnelles</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="background"></div>
+
+
+<main class="container">
+
+
+<section id="auth-galerie">
+
+
+    <p class="classification">
+        AUTHENTIFICATION REQUISE
+    </p>
+
+
+    <h2>
+        ARCHIVES PERSONNELLES
+    </h2>
+
+
+    <p>
+        Les archives suivantes contiennent des données
+        strictement confidentielles.
+        <br><br>
+        Vérification de l'identité du destinataire obligatoire.
+    </p>
+
+
+    <h3>
+        Question de vérification
+    </h3>
+
+
+    <p>
+        Quel surnom me donnes-tu régulièrement ?
+    </p>
+
+
+    <input
+    id="code-galerie"
+    type="password"
+    placeholder="Votre réponse..."
+    >
+
+
+    <button id="ouvrir-galerie">
+        CONFIRMER L'IDENTITÉ
+    </button>
+
+
+    <p id="message-galerie"></p>
+
+    <div id="chargement-galerie" class="cache">
+
+    <p id="texte-chargement">
+    </p>
+
+
+    <div class="barre-chargement">
+
+        <div id="progression-galerie"></div>
+
+    </div>
+
+
+    <p id="pourcentage-galerie">
+        0%
+    </p>
+
+</div>
+
+
+
+</section>
+
+
+
+<section id="galerie-section" class="cache">
+
+
+    <p class="classification">
+        ARCHIVES PERSONNELLES
+    </p>
+
+
+    <h2>
+    DOSSIERS DÉCLASSIFIÉS
+</h2>
+
+
+<button id="copier-lien-galerie">
+
+    GALERIE
+
+</button>
+
+
+<p>
+    Fichiers personnels récupérés. Accès réservé au destinataire..
+</p>
+
+
+<p id="message-lien"></p>
+
+
+
+    <div id="galerie-photos">
+
+        <img src="Photos/1.jpg">
+        <img src="Photos/2.jpg">
+        <img src="Photos/3.jpg">
+        <img src="Photos/4.jpg">
+        <img src="Photos/5.jpg">
+        <img src="Photos/6.jpg">
+        <img src="Photos/7.jpg">
+        <img src="Photos/8.jpg">
+        <img src="Photos/9.jpg">
+        <img src="Photos/10.jpg">
+        <img src="Photos/11.jpg">
+        <img src="Photos/bonus.jpg">
+
+    </div>
+
+
+</section>
+
+<section id="visionneuse" class="cache">
+
+    <span id="fermer-photo">✕</span>
+
+    <img id="photo-grand" src="">
+
+</section>
+
+
+
+</main>
+
+
+<script src="galerie.js"></script>
+
+
+</body>
+
+</html>
